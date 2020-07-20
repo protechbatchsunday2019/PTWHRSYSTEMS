@@ -7,7 +7,8 @@ Feature: Net Pay Test
     When I enter rate as 20.
     And I enter total hour as 40. 
    	Then I expect net pay is 10% deduction from gross pay.
-   	
+     the result should be 720.   
+  
   Scenario: Get net pay with an employee of $0 HOUR & 0 total.
     Given I use the HR system to calculate net pay of an employee.
     When I enter rate as 0.
