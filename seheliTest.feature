@@ -18,7 +18,7 @@ Feature: Net Pay Test
     When I enter hourly rate as $60
     And I enter total hour 40
     And I expect net pay is 20% deducted from gross pay.
-    Then I expect the result will be: Net Pay = 1920.0  Sharna
+    Then I expect the result will be: Net Pay = 1920.0
     
     
     
