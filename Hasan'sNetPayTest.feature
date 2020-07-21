@@ -1,7 +1,8 @@
 Feature: Net Pay Calculation Test
       As a HR I want to calculate Net pay for employees based on gross pay.
 
-  Scenario: Get net pay with an employee with hourly rate $15 and total hour 40.
+			Positive Test Scenario:
+ 	 Scenario: Get net pay with an employee with hourly rate $15 and total hour 40.
     Given I use the HR system to calculate netpay pay of an employee.
     When I enter hourly rate as $15
     And I enter total hour 40
@@ -25,6 +26,7 @@ Feature: Net Pay Calculation Test
     And I expect net pay is 30% deducted from gross pay.
        #Result will be:- Net Pay = 2240.0
        
+                          Negative Test Scenario:
 	Scenario: Get net pay with an employee with hourly rate $14 and total hour 40.
     Given I use the HR system to calculate netpay pay of an employee.
     When I enter hourly rate as $14
