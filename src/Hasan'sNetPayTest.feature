@@ -5,7 +5,7 @@ Feature: Net Pay Calculation Test
     Given I use the HR system to calculate netpay pay of an employee.
     When I enter hourly rate as $15
     And I enter total hour 40
-    Then I validate the output of gross pay is >0 and <=1500
+    Then I validate the output of gross pay is 600 and in between >0 and <=1500
     And I expect net pay is 10% deducted from gross pay.
        #Result will be:- Net Pay = 540.0
 
@@ -13,7 +13,7 @@ Feature: Net Pay Calculation Test
     Given I use the HR system to calculate netpay pay of an employee.
     When I enter hourly rate as $60
     And I enter total hour 40
-    Then I validate the output of gross pay is >1500 and <=3000
+    Then I validate the output of gross pay is 2400.0 and in between >1500 and <=3000
     And I expect net pay is 20% deducted from gross pay.
        #Result will be:- Net Pay = 1920.0
        
@@ -21,7 +21,7 @@ Feature: Net Pay Calculation Test
     Given I use the HR system to calculate netpay pay of an employee.
     When I enter hourly rate as $80
     And I enter total hour 40
-    Then I validate the output of gross pay is >3000 and <=4500
+    Then I validate the output of gross pay is 3200.0 and in between >3000 and <=4500
     And I expect net pay is 30% deducted from gross pay.
        #Result will be:- Net Pay = 2240.0
        
